@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import "tailwindcss";
+
+.logo {
+  font-family: "Michroma";
+  font-weight: 800;
+}
