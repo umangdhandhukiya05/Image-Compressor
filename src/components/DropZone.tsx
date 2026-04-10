@@ -59,7 +59,7 @@ const DropZone = () => {
         <input {...getInputProps()} />
         {isDragActive
           ? "Drop images here..."
-          : "Drag & drop images here, or click to select"}
+          : "Drag & drop images here, or click to select Max Limit 5 image"}
       </div>
 
       <button
@@ -75,8 +75,11 @@ const DropZone = () => {
         <div className="flex justify-center items-center gap-4">
           {files?.map((file) => (
             <div className="flex flex-col gap-2 max-w-34" key={file?.name}>
-              <img className="w-32 h-24 rounded-md" src={URL.createObjectURL(file)} />
-              <li className="list-none">{file?.name.slice(0,14)}</li>
+              <img
+                className="w-32 h-24 rounded-md"
+                src={URL.createObjectURL(file)}
+              />
+              <li className="list-none">{file?.name.slice(0, 14)}</li>
             </div>
           ))}
         </div>
