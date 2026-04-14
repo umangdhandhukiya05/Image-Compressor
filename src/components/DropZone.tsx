@@ -39,7 +39,7 @@ const DropZone = () => {
         }),
       );
 
-      const zipBlob = await zip.generateAsync({ type: "binarystring" });
+      const zipBlob = await zip.generateAsync({ type: "blob" });
       console.log(zipBlob);
       saveAs(zipBlob, "compressed-images.zip");
     } catch (err) {
